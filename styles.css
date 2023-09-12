@@ -1,10 +1,12 @@
+/* Updated :root with Cooler Colors */
 :root {
-  --primary: #8a63ff; /* This is the primary color. */
-  --secondary: #A591FF; /* This is the secondary color. */
-  --bg: #1F1D36; /* This is the background color. */
-  --heading: #E0DEF4; /* This is the color for headings. */
-  --text: #D5D4F0; /* This is the color for text. */
+  --primary: #ff6b6b; /* This is the primary color. */
+  --secondary: #ffa07a; /* This is the secondary color. */
+  --bg: #1f1f1f; /* This is the background color. */
+  --heading: #61dafb; /* This is the color for headings. */
+  --text: #ffffff; /* This is the color for text. */
 }
+
 
 body {
   font-family: system-ui, sans-serif; /* This sets the font family. */
@@ -13,26 +15,61 @@ body {
   color: var(--text); /* This sets the text color. */
 }
 
+/* Global Heading Styles */
+/* Global Heading Styles */
 h1, h2, h3 {
-  color: var(--heading); /* This sets the color for headings. */
+  color: var(--heading); /* Set the color for headings using a custom variable. */
+  transition: color 0.3s ease; /* Add a smooth color transition on hover. */
 }
 
+/* H1 Styles */
 h1 {
-  font-size: 5.5rem; /* This sets the font size for h1 headings. */
-  margin-bottom: 20px; /* This sets the margin for h1 headings. */
+  font-size: 70px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: background-position 0.3s ease, color 0.3s ease; /* Add a gradient animation and color transition on hover. */
 }
 
+/* Global Heading Styles */
+/* Updated h1 Styles */
+h1, h2, h3 {
+  font-weight: 600;
+  background-image: linear-gradient(to left, #f4f2f9, #b393d3);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-position: left;
+  transition: background-position 0.3s ease, color 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover {
+  background-position: right;
+  color: #553c9a;
+}
+
+/* H2 Styles */
 h2 {
-  font-size: 4rem; /* This sets the font size for h2 headings. */
-  width: 100%; /* This sets the width for h2 headings. */
-  align-self: center; /* This centers the h2 headings vertically. */
-  text-align: center; /* This centers the h2 headings horizontally. */
+  font-size: 4rem;
+  width: 100%;
+  align-self: center;
+  text-align: center;
+  margin-top: 30px;
 }
 
+/* H3 Styles */
 h3 {
-  font-size: 2.5rem; /* This sets the font size for h3 headings. */
-  margin-bottom: 10px; /* This sets the margin for h3 headings. */
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--heading);
+  padding-bottom: 5px;
 }
+
+
+
 
 section {
   padding: 60px 20px; /* This sets the padding for sections. */
@@ -62,6 +99,27 @@ header {
   padding: 20px 0;
 }
 
+/* Navigation Styles */
+nav {
+  background-color: #333; /* Background color for the navigation bar */
+  padding: 20px 0; /* Add some padding to the top and bottom */
+  text-align: center; /* Center align the navigation items */
+}
+
+nav a {
+  color: #fff; /* Text color for navigation links */
+  text-decoration: none; /* Remove underlines from links */
+  font-size: 18px; /* Font size for navigation links */
+  margin: 0 20px; /* Add some horizontal spacing between links */
+  transition: color 0.3s ease; /* Add a smooth color transition on hover */
+}
+
+/* Navigation Styles */
+nav {
+  background-color: transparent; /* Set a transparent background for the navigation bar */
+  text-align: center; /* Center align the navigation items */
+}
+
 nav a {
   /* The nav links will have a margin of 10px, padding of 8px 15px, a border radius of 5px, no text decoration, and a color of var(--text). */
   margin: 10px;
@@ -70,14 +128,15 @@ nav a {
   text-decoration: none;
   color: var(--text);
   font-size: 250%;
+  border: 2px solid var(--text); /* Add a border to the links */
+  transition: background 0.3s ease, color 0.3s ease; /* Add smooth transitions for background and text color */
 }
 
 nav a:hover {
   /* When the nav links are hovered over, they will change to a background color of var(--primary). */
   background: var(--primary);
+  color: white; /* Change text color on hover to white */
 }
-
-/* Sections */
 
 section {
   /* The sections will be displayed in a flex container with a flex direction of column and align-items of center. This means that the children of the sections will be displayed one after the other, and the items will be centered vertically. */
@@ -118,125 +177,110 @@ section {
   color: var(--primary);
 }
 
-/* This code defines the style for the education section. */
-
-#education {
-  /* The education section will have a max-width of 100% and will be centered on the page. */
-  max-width: 100%;
+/* Education Item Styles for a Dark Theme */
+.education-item {
+  background-color: #222; /* Dark background color */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-  align-items: center;
-
-  /* The margin attribute has been commented out because it is not necessary. */
-  /* margin: 0 auto; */
 }
 
-#education h2 {
-  /* The h2 headings in the education section will have a margin-bottom of 30px and will be displayed full-width. */
-  margin-bottom: 30px;
-  max-width: 100%;
+.education-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-#education h3 {
-  /* The h3 headings in the education section will have a margin-bottom of 10px and will be displayed full-width. */
+.education-item h3 {
+  color: #ff4500; /* Reddish heading color */
+  font-size: 24px;
   margin-bottom: 10px;
-  max-width: 100%;
+  font-family: 'YourFont', sans-serif; /* Use your preferred font */
 }
 
-#education p {
-  /* The paragraphs in the education section will have a line-height of 1.6, will be displayed full-width, and will have a font size of 180%. */
-  line-height: 1.6;
-  max-width: 100%;
-  font-size: 180%;
+.education-date {
+  color: #ccc; /* Light gray date color */
+  font-size: 16px;
 }
 
-#education ul {
-  /* The unordered lists in the education section will have no list-style and will be displayed full-width. */
-  list-style: none;
-  max-width: 100%;
 
-  /* The padding-left attribute has been commented out because it is not necessary. */
-  /* padding-left: 0; */
-}
 
-#education li {
-  /* The list items in the education section will have a line-height of 1.8 and will be displayed full-width. */
-  line-height: 1.8;
-  max-width: 100%;
-}
-
-/* This media query defines the style for the education section when the screen width is less than 600px. */
-
-@media (max-width: 600px) {
-
-  /* The education section will have padding of 20px. */
-  #education {
-    padding: 20px;
-  }
-
-  /* The h2 headings in the education section will have a font size of 28px. */
-  #education h2 {
-    font-size: 28px;
-  }
-
-  /* The h3 headings in the education section will have a font size of 20px. */
-  #education h3 {
-    font-size: 20px;
-  }
-
-}
 
  /* This code defines the style for the projects section. */
 
 /* Projects Container */
 
+/* Projects Container */
+/* Projects Container */
 .projects {
-  /* The projects container will have overflow-x: auto, overflow-y: hidden, and white-space: nowrap. This will allow the projects to scroll horizontally if they are too wide to fit on the screen. */
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
-
-  /* The projects container will be centered on the page and will have a max-width of 1000px. */
   margin: 0 auto;
   max-width: 1000px;
-
-  /* The projects container will have padding of 20px. */
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 /* Individual Projects */
-
 .project {
-  /* Each project will be displayed as an inline-block element with a width of 300px and a vertical alignment of top. It will also have a margin-right of 20px, a background color of #38355c, and rounded borders with a radius of 10px. */
-  display: inline-block; 
+  display: inline-block;
   width: 300px;
   vertical-align: top;
-  margin-right: 20px;
   background-color: #38355c;
   border-radius: 10px;
-
-  /* The project will have padding of 20px between the content. */
   padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05); /* Slightly scale up the project on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Enhance the box shadow on hover */
 }
 
 /* Remove margin from last project */
-
 .project:last-child {
-  /* The last project will not have a margin-right of 20px. */
   margin-right: 0;
 }
 
 /* Project Content Styling */
-
 .project h3 {
-  /* The h3 headings for each project will have a margin-top of 10px and a font size of 1.3rem. */
   margin-top: 10px;
   font-size: 1.3rem;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .project p {
-  /* The paragraphs for each project will have a color of #8c87a2. */
-  color: #8c87a2;
+  color: #b3b3cc;
+  text-align: center;
 }
+
+/* Project Link Styling */
+.project a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  background-color: var(--primary); /* Use your primary color for the link background */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.project a:hover {
+  background-color: var(--secondary); /* Change the background color on hover */
+}
+
 
 /* This code defines the style for the contact section. */
 
